@@ -1,7 +1,14 @@
 
-<h1> This is Sean's $hit</h1>
+<h1> This is Sean's</h1>
 
 <h3> <%= @blog.title %> </h3>
 <p> <%= @blog.content %> </p>
 
 <p><%= link_to 'Back Home', blogs_path %></p>
+
+<p>
+  <%= button_to 'Delete Blog', delete_blog_path(@blog), method: :delete, form: { data: { 'turbo-confirm': 'Are you sure?' } } %>
+<p>
+  <%= link_to 'Update Blog', edit_blog_path%>
+<p>
+ 

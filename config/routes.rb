@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   get 'blog/new' => 'blog#new', as: "new_blog"
   get 'blog/:id' => 'blog#show', as: "blog"
   post 'blogs' => 'blog#create'
+  get 'blogs/:id/edit' => 'blog#edit', as: 'edit_blog'
+  patch 'blog/:id' => 'blog#update', as: 'update_blog'
+  delete 'blogs/:id' => 'blog#destroy', as: 'delete_blog'
+  
   root 'blog#index'
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  
 end
