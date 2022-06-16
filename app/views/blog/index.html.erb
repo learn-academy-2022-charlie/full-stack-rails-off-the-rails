@@ -1,0 +1,14 @@
+<h1>Blog App</h1>
+<h2>This is our home page</h2>
+
+<ul>
+  <% @blogs.each do |blog| %>
+    <li>
+    <%= link_to blog.title, blog_path(blog) %>
+    <br>
+    <br>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Add Blog', new_blog_path %></p>
